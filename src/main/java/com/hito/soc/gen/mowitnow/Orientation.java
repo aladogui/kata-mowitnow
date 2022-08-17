@@ -15,11 +15,23 @@ public enum Orientation {
   }
 
   public Orientation turnRight(){
-    return null;
+    Orientation orientation;
+    int indexOfElement = orientations.indexOf(this);
+    if (indexOfElement==orientations.size()-1){
+      orientation= orientations.getFirst();
+    }else
+      orientation= orientations.get(indexOfElement+1);
+    return orientation;
   }
 
   public Orientation turnLeft(){
-    return null;
+    Orientation orientation;
+    int indexOfElement = orientations.indexOf(this);
+    if (indexOfElement==0){
+      orientation= orientations.getLast();
+    }else
+      orientation= orientations.get(indexOfElement-1);
+    return orientation;
   }
 
 
