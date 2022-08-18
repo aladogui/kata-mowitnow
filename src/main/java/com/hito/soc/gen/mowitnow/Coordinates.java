@@ -1,5 +1,10 @@
 package com.hito.soc.gen.mowitnow;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class Coordinates {
 
   private int x;
@@ -10,24 +15,24 @@ public class Coordinates {
     this.y = 0;
   }
 
-  public Coordinates(final int x, final int y) {
-    this.x = x;
-    this.y = y;
+  public void moveRight(){
+    this.x++ ;
   }
 
-  public int getX() {
-    return x;
+  public void moveLeft(){
+    this.x--;
   }
 
-  public void setX(final int x) {
-    this.x = x;
+  public void moveDown(){
+    this.y--;
   }
 
-  public int getY() {
-    return y;
+  public void moveUp(){
+    this.y++;
   }
 
-  public void setY(final int y) {
-    this.y = y;
+  @Override
+  public String toString() {
+    return x+" "+y;
   }
 }
