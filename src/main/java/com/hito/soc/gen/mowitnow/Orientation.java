@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public enum Orientation {
   N("NORTH"),
-  E("EST"),
+  E("EAST"),
   W("WEST"),
   S("SOUTH");
 
